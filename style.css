@@ -9,6 +9,22 @@
     --bg-dark:#272727;
     --main-muted:#F2F4F7;
 }
+/* global classes */
+.btn-main{
+    background-color: var(--main-color);
+    color: white;
+    border: unset;
+    transition: all .5s;
+}  
+.btn-main:hover ,.btn-main:active{
+    background-color: var(--btn-hover) !important;
+}  
+.rotate-45{
+    transform: rotate(-45deg);
+}
+.text-main{
+    color: var(--main-color);
+}
 
 /* start of header section  */
 
@@ -31,7 +47,58 @@
 
 
 /* start of skills section  */
+#skills{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6)  0%  100%) ,url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.imgContainer{
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.169);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all .5s;
+}
+.imgContainer:hover{
+    border-radius: 100%;
+}
+ 
+.imgContainer img{
+    transition: all .7s;
+}
+.imgContainer:hover img{
+    scale: .8;
+}
+.animate{
+    opacity: 0;
+    transition: all .6s;
+}
+.animate.active{
+    opacity: 1;
+}
+.animate.up{
+    transform: translateY(50px);
 
+}
+.animate.left{
+    transform: translatex(-50px);
+}
+.animate.right{
+    transform: translatex(50px);
+}
+.animate.active.up{
+    transform: translateY(0);
+}
+.animate.active.left{
+    transform: translatex(0);
+}
+.animate.active.right{
+    transform: translatex(0);
+}
 
 
 
@@ -46,3 +113,21 @@
 
 
 /* strat of  footer section  */
+#contact{
+    background-color: var(--bg-dark);
+    color: white;
+}
+.form-control:focus{
+    box-shadow: none;
+}
+.navigate li a , .social a{
+    text-decoration: none;
+    color: white;
+    transition: all .5s;
+}
+.navigate li a , .social a i{
+    transition: all .5s;
+}
+.social a:hover i , .navigate li:hover a{
+    color: var(--main-color);
+} 
