@@ -232,6 +232,7 @@ z-index: 4;
 .swiper-pagination-bullet {
   width: 15px !important;
   height: 15px !important;
+  transition: all .2s;
 }
 .swiper-pagination-bullet-active {
   background: var(--main-color) !important;
@@ -239,6 +240,8 @@ z-index: 4;
   height: 15px !important;
   border-radius: 10px !important;
 }
+
+
 
 @media only screen and (max-width: 600px) {
   .work {
