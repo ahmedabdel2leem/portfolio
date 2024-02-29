@@ -531,6 +531,7 @@ z-index: 4;
     font-weight: 500;
     font-size: 2rem;
   }
+
 }
 @media only screen and (max-width: 500px) {
   .question h2 {
@@ -571,6 +572,7 @@ z-index: 4;
   .test div {
     text-align: start;
   }
+
 }
 
 @media only screen and (max-width: 350px) {
@@ -584,6 +586,16 @@ z-index: 4;
   .text-under-input {
     font-size: 12px;
   }
+  .layIcon{
+    padding:200px ;
+  }
+}
+@media only screen and (max-width: 768px) {
+  div.layIcon{
+    bottom: 67px;
+    right: 20px;
+  }
+
 }
 
 /*! strat of  footer section  */
