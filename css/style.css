@@ -119,10 +119,20 @@ mask-repeat: no-repeat;
   bottom: -79px;
 }
 .service .carousel-indicators [data-bs-target] {
-  width: 34px;
-  height: 10px;
-  border-radius: 20px;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  transition: all .2s;
+  border: none;
 }
+.service .carousel-indicators .active{
+  background: var(--main-color) !important;
+  width: 50px !important;
+  height: 15px !important;
+  border-radius: 10px !important;
+
+}
+
 
 /*! start of Experince section  */
 
@@ -132,7 +142,7 @@ mask-repeat: no-repeat;
   overflow: hidden;
 }
 #education .item {
-  background-color: var(--footer-color);
+  background-color: var(--main-muted);
   position: relative;
 }
 #education .item::after {
@@ -163,7 +173,9 @@ mask-repeat: no-repeat;
 }
 #education .date {
   padding: 5px 10px;
-  background-color: var(--dateBg-color);
+  background-color: var(--main-color);
+  font-weight: 400
+  ;
 }
 #education button:hover {
   text-shadow: 0 1px 5px yellow;
@@ -261,7 +273,7 @@ z-index: 4;
   background-position: center;
   background-size: cover;
 }
-.imgContainer {
+#skills .imgContainer {
   cursor: pointer;
   width: 70px;
   height: 70px;
@@ -272,39 +284,39 @@ z-index: 4;
   border-radius: 10px;
   transition: all 0.5s;
 }
-.imgContainer:hover {
+#skills .imgContainer:hover {
   border-radius: 100%;
 }
 
-.imgContainer img {
+#skills .imgContainer img {
   transition: all 0.7s;
 }
-.imgContainer:hover img {
+#skills .imgContainer:hover img {
   scale: 0.8;
 }
-.animate {
+#skills .animate {
   opacity: 0;
   transition: all 0.6s;
 }
-.animate.active {
+#skills .animate.active {
   opacity: 1;
 }
-.animate.up {
+#skills .animate.up {
   transform: translateY(50px);
 }
-.animate.left {
+#skills .animate.left {
   transform: translatex(-50px);
 }
-.animate.right {
+#skills .animate.right {
   transform: translatex(50px);
 }
-.animate.active.up {
+#skills .animate.active.up {
   transform: translateY(0);
 }
-.animate.active.left {
+#skills .animate.active.left {
   transform: translatex(0);
 }
-.animate.active.right {
+#skills .animate.active.right {
   transform: translatex(0);
 }
 
