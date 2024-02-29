@@ -53,7 +53,7 @@ html {
 
 /*! start of services section  */
 .service{
-  background-image: url(../images/bg_4.jpg);
+  background-image: url(../images/Default_wavy_3d_demantions_black_3.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -90,8 +90,9 @@ html {
   /* border-radius: 20px;
   border: 1px solid white; 
   border-radius: 100px; */
-  mask-image: url(/css/Rectangle\ 1.svg);
+  mask-image: url(../css/Rectangle\ 1.svg);
 mask-repeat: no-repeat;
+backdrop-filter: blur(10px);
 }
 .service .services .imglayers img{
   border-radius: 20px;
