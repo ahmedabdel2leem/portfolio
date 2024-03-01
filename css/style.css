@@ -571,7 +571,9 @@ z-index: 4;
   background-color: rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
 }
-
+#portfolio .card:hover .overlay {
+  top: 0;
+}
 #portfolio .overlay i {
   background-color: var(--main-color);
   padding: 20px;
@@ -580,9 +582,7 @@ z-index: 4;
   transition: all 0.5s;
 }
 
-#portfolio .card:hover .overlay {
-  top: 0;
-}
+
 
 #portfolio .overlay i:hover {
   background-color: #fff;
