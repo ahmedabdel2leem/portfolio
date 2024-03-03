@@ -466,6 +466,7 @@ backdrop-filter: blur(5px);
   background-color: var(--white-color);
   font-weight: 200;
   overflow: hidden;
+  
 }
 #education .item {
   background-color: var(--main-muted);
