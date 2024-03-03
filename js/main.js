@@ -1,11 +1,24 @@
 /////global
 const sections = document.querySelectorAll(".animate");
+const nav = document.getElementById('navId');
+console.log(nav)
+console.log(nav.offsetHeight)
+window.addEventListener('scroll', changeNav);
+
+function changeNav() {
+  if(window.scrollY>100){
+    nav.classList.add('toFixed')
+  }else{
+    nav.classList.remove('toFixed')
+  }
+  console.log(nav.scrollTop,window.scrollY);
+}
 const tooltipTriggerList = document.querySelectorAll(
   '[data-bs-toggle="tooltip"]'
 );
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-);
+)
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

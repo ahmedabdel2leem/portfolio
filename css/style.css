@@ -47,17 +47,106 @@ html {
   color: var(--main-color);
 }
 
+
+
+
+
+/* header */
+header{
+  .centerdImg img{
+    position: relative;
+    z-index:2;
+  }
+  .headerLine{
+    bottom: -65px;
+    position:relative;
+  .btn-header {
+   padding:5px 30px ;
+   border-radius: 20px;
+   border: 2px solid ;
+  }
+  .btn-header:hover {
+    background-color: var(--main-color);
+  }
+  }
+  
+}
+header .bg-circle {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 80%;
+  background-color: #fe853a;
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+  z-index: -1;
+} 
+
+
+
+
+
+
+
+/* .navbar-nav .nav-item {
+  margin-right: 30px;
+} */
+ nav.toFixed{
+  margin:0;
+  padding-inline:  30px ;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  z-index: 999;
+  transition: margin-top .5s;
+  background-color: #fff !important;
+  .nav-link{
+    color: #000 ;
+  }
+  .nav-link.active,.nav-link:hover{
+  background-color: var(--bg-dark) !important;
+}
+.navbar-toggler-icon{
+  color: #000 !important;
+}
+
+}
+.navbar {
+  margin: 30px 30px 0 30px;
+  border-radius: 50px;
+  transition: position 10s;
+}
+.navbar .nav-link {
+  color: white;
+  padding: 18px 35px  !important;
+  border-radius: 50px;
+
+  
+}
+.navbar .nav-link:hover {
+  color: white;
+}
+.navbar .nav-link.active{
+  background-color: var(--main-color);
+  color: #fff;
+
+
+ 
+}
+
 /*! start of header section  */
-header {
+/* header {
   height: 80vh;
   position: relative;
 }
 header h1 {
   font-size: 5vw;
 }
-header .parent {
-  /* position: relative; */
-}
+
 
 header .child {
   position: absolute;
@@ -73,23 +162,7 @@ header .fw-900 {
   font-weight: 900;
 }
 
-.navbar-nav .nav-item {
-  margin-right: 30px;
-}
-.navbar {
-  padding: 15px;
-  margin: 30px;
-  border-radius: 40px;
-}
-.navbar .nav-link {
-  color: white;
-}
-.navbar .nav-link:hover {
-  color: white;
-}
-.navbar .nav-link.active{
-  color: var(--main-color);
-}
+
 header .m-top {
   margin-top: 60px;
 }
@@ -127,19 +200,7 @@ header .overlay {
   backdrop-filter: blur(5px);
   z-index: -1;
 }
-
-header .bg-circle {
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 80%;
-  background-color: #fe853a;
-  border-top-left-radius: 500px;
-  border-top-right-radius: 500px;
-  z-index: -1;
-}
+*/
 
 /* @media screen  and (max-width:576px) {
  h1{
@@ -224,7 +285,7 @@ backdrop-filter: blur(5px);
 
 /*! start of services section  */
 .service {
-  background-image: url(../images/Default_wavy_3d_demantions_black_3.jpg);
+  background-image: url(../images/ahmed-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -319,6 +380,7 @@ backdrop-filter: blur(5px);
     width: 60px;
     height: 60px;
   }
+  
 }
 @media screen and (max-width: 768px) {
   .layIcon i {
@@ -330,6 +392,11 @@ backdrop-filter: blur(5px);
     width: 60px;
     height: 60px;
   }
+  header .headerLine {
+    bottom: -20px;
+  }
+
+
 }
 
 @media screen and (max-width: 600px) {
