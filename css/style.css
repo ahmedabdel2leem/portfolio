@@ -29,6 +29,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding: 40px;
 }
+
 /* ! global classes */
 .btn-main {
   background-color: var(--main-color);
@@ -47,12 +48,86 @@ html {
   color: var(--main-color);
 }
 
+/* start navbar */
+#navId{
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+}
+ 
+ @media screen and (min-width:993px) {
+  #navId{
+    position: relative;  
+  }
+  #navId.toFixed{
+    box-shadow: var(--main-color) 0px 0px 5px;
+    margin:0;
+    padding-inline: 300px ;
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    z-index: 999;
+    transition: margin-top .5s;
+    background-color: #fff !important;
+      .nav-link{
+        color: #000 ;
+      }
+      .nav-link.active ,.nav-link:hover{
+        background-color: var(--main-color) !important;
+      }
+      .fa-bars{
+        color: #000 !important;
+      }
+    }
+    .educationBorder{
+      border-right: 3px solid var(--dateBg-color);
+    }
+    #education .item::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #1e1e28;
+      -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+      box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+      z-index: 2;
+      transition: box-shadow 0.3s ease;
+      transform: translatey(-50%);
+    } 
+    #education .item:hover::before {
+      box-shadow: 0px 0px 4px 4px var(--main-color);
+    }
+ }
 
+.navbar {
+  margin: 15px 15px 0 15px;
+  border-radius: 50px;
+  transition: position 10s;
+  width: fit-content;
+}
+.navbar .nav-link {
+  color: white;
+  padding: 15px 25px  !important;
+  border-radius: 50px;
+}
+.navbar .nav-link:hover {
+  color: white;
+}
+.navbar .nav-link.active{
+  background-color: var(--main-color);
+  color: #fff;
+}
+/* end navbar */
 
-
-
-/* header */
-header{
+/* start header */
+header#home{
   .centerdImg img{
     position: relative;
     z-index:2;
@@ -71,6 +146,7 @@ header{
   }
   
 }
+
 header .bg-circle {
   position: absolute;
   bottom: 0%;
@@ -83,260 +159,57 @@ header .bg-circle {
   border-top-right-radius: 500px;
   z-index: -1;
 } 
+/* end header */
 
-
-
-
-
-
-
-/* .navbar-nav .nav-item {
-  margin-right: 30px;
-} */
- nav.toFixed{
-  margin:0;
-  padding-inline:  30px ;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 0;
-  z-index: 999;
-  transition: margin-top .5s;
-  background-color: #fff !important;
-  .nav-link{
-    color: #000 ;
-  }
-  .nav-link.active,.nav-link:hover{
-  background-color: var(--bg-dark) !important;
-}
-.navbar-toggler-icon{
-  color: #000 !important;
-}
-
-}
-.navbar {
-  margin: 30px 30px 0 30px;
-  border-radius: 50px;
-  transition: position 10s;
-}
-.navbar .nav-link {
-  color: white;
-  padding: 18px 35px  !important;
-  border-radius: 50px;
-
-  
-}
-.navbar .nav-link:hover {
-  color: white;
-}
-.navbar .nav-link.active{
-  background-color: var(--main-color);
-  color: #fff;
-
-
- 
-}
-
-/*! start of header section  */
-/* header {
-  height: 80vh;
-  position: relative;
-}
-header h1 {
-  font-size: 5vw;
-}
-
-
-header .child {
-  position: absolute;
-  margin-top: 100px;
-  bottom: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-header p {
-  color: var(--main-text-color);
-}
-header .fw-900 {
-  font-weight: 900;
-}
-
-
-header .m-top {
-  margin-top: 60px;
-}
-header .above-photo {
-  width: 200px;
-  height: 65px;
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.268);
-}
-header .btn-header {
-  background-color: var(--main-color);
-  padding-block: 10px;
-  border-radius: 20px;
-}
-
-header .btn-header:hover {
-  background-color: var(--main-color);
-}
-
-header .child-img {
-  position: absolute;
-  left: 34%;
-  bottom: 10%;
-  z-index: 1;
-}
-
-header .overlay {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 200px;
-  height: 65px;
-  border-radius: 30px;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  z-index: -1;
-}
-*/
-
-/* @media screen  and (max-width:576px) {
- h1{
-   font-size: 9vw;
- }
-  .bg-circle{
-   position: absolute;
-   bottom: 0%;
-   left: 50%;
-   transform: translateX(-50%);
-   width: 200px;
-   height:100px;
-   background-color: #fe853a;
-   border-top-left-radius: 500px;
-   border-top-right-radius: 500px;
-   z-index:-1;
-}
-
-.child-img{
- position: absolute;
- left: 18%;
- bottom: 10%;
- z-index: 1;
-}
-.overlay{
- position: absolute;
- left: 0;
-bottom: 0;
-width: 160px;
- height: 50px;
- border-radius: 30px;
-
-backdrop-filter: blur(5px);
-
-
-  z-index: -1;
-  
-}
-.above-photo{
- width: 160px;
- height: 50px;
- border-radius: 30px;
- background-color: rgba(255, 255, 255, 0.268);
-
-
-}
-.px-2{
- padding-right: 0px !important;
- padding-left:  0px !important;
-}
-.btn-header{
- background-color: var(--main-color);
- padding-inline: 10px;
- padding-block: 0px;
- border-radius: 20px;
- 
-
-}
-
-.px-5{
- padding-right: 1px !important ;
- padding-left: 1px  !important;
-}
-
-
-.px-4{
- padding-right: 3px !important ;
- padding-left: 3px  !important;
-}
-.prt1 p {
- font-size: 4vw;
-}
-.fs-3{
- font-size: 15px !important;
-}
-.fs-4{
- font-size: 10px !important;
-}
-
-
-} */
 
 /*! start of services section  */
-.service {
-  background-image: url(../images/ahmed-bg.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+#service {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0% 100%),url(../images/ahmed-bg.png);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: auto auto;
   border-radius: 30px;
   color: white;
   text-align: center;
   padding-block: 4%;
 }
 
-.service h2 {
+#service h2 {
   font-size: 3rem;
 }
-.service .servSpan {
+#service .servSpan {
   color: var(--main-color);
 }
-.service p.paragraph {
+#service p.paragraph {
   font-size: 13px;
   letter-spacing: 2px;
 }
 
-.service .services .imglayers {
-  /* background-color: gray; */
-
+#service .services .imglayers {
   position: relative;
-  box-shadow: 0px -30px 1px -9px gray,
-    0px -61px 0px -22px rgba(128, 128, 128, 0.344);
+  box-shadow: 0px -30px 1px -9px gray, 0px -61px 0px -22px rgba(128, 128, 128, 0.344);
   border-radius: 40px;
 }
-.service .adrs {
+#service .adrs {
   margin-bottom: 16%;
   padding: 15px;
 }
-.service .borders {
+#service .borders {
   background-color: rgba(233, 233, 233, 0.236);
-  /* border-radius: 20px;
-  border: 1px solid white; 
-  border-radius: 100px; */
-  -webkit-mask-image: url(../css/Rectangle\ 1.svg);
-  mask-image: url(../css/Rectangle\ 1.svg);
+  -webkit-mask-image: url(../css/Rectangle.svg);
+  mask-image: url(../css/Rectangle.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-.service .services .imglayers img {
+#service .services .imglayers img {
   border-radius: 20px;
   z-index: 1;
   position: relative;
 }
 
-.service .layIcon {
+#service .layIcon {
   background-color: var(--main-color);
   display: inline-flex;
   justify-content: center;
@@ -374,7 +247,7 @@ backdrop-filter: blur(5px);
   .layIcon i {
     font-size: 30px;
   }
-  .service .layIcon {
+  #service .layIcon {
     right: 5px;
     bottom: 15px;
     width: 60px;
@@ -386,7 +259,7 @@ backdrop-filter: blur(5px);
   .layIcon i {
     font-size: 20px;
   }
-  .service .layIcon {
+  #service .layIcon {
     right: 0px;
     bottom: 10px;
     width: 60px;
@@ -395,15 +268,13 @@ backdrop-filter: blur(5px);
   header .headerLine {
     bottom: -20px;
   }
-
-
 }
 
 @media screen and (max-width: 600px) {
   .layIcon i {
     font-size: 40px;
   }
-  .service .layIcon {
+  #service .layIcon {
     right: 10px;
     bottom: 20px;
     width: 80px;
@@ -415,8 +286,7 @@ backdrop-filter: blur(5px);
   .layIcon i {
     font-size: 40px;
   }
-
-  .service .layIcon {
+  #service .layIcon {
     width: 70px;
     height: 70px;
     right: 25px;
@@ -427,13 +297,12 @@ backdrop-filter: blur(5px);
   .layIcon i {
     font-size: 30px;
   }
-
-  .service .layIcon {
+  #service .layIcon {
     right: 10px;
   }
 }
 @media screen and (max-width: 410px) {
-  .service .layIcon {
+  #service .layIcon {
     right: 5px;
     bottom: 15px;
     width: 60px;
@@ -445,11 +314,11 @@ backdrop-filter: blur(5px);
   padding: 20px;
 }
 
-.service h2 {
+#service h2 {
   padding-left: 20px;
 }
 
-.service p {
+#service p {
   padding-right: 20px;
 }
 
@@ -459,52 +328,18 @@ backdrop-filter: blur(5px);
 .serviceswiper .swiper-button-prev {
   left: 0px;
 }
+/*! end of services section  */
+
 
 /*! start of Experince section  */
 
-#education {
-  background-color: var(--white-color);
-  font-weight: 200;
-  overflow: hidden;
-  
-}
-#education .item {
-  background-color: var(--main-muted);
-  position: relative;
-}
-#education .item::after {
-  content: "";
-  position: absolute;
-  right: -15px;
-  top: 10px;
-  border: 8px solid transparent;
-  border-left-color: var(--footer-color);
-}
-#education .item::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: -70px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: solid 3px #ffc107;
-  background: #1e1e28;
-  -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
-  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
-  z-index: 2;
-  transition: box-shadow 0.3s ease;
-}
-#education .item:hover::before {
-  box-shadow: 0px 0px 5px 2px #ffc107;
-}
 #education .date {
   padding: 5px 10px;
-  background-color: var(--main-color);
+  background-color: var(--border-color);
   font-weight: 400;
 }
-#education button:hover {
-  text-shadow: 0 1px 5px yellow;
+#education button:hover ,#education .butt:hover span {
+  color: black !important;
 }
 #education .butt {
   transition: all 5s;
@@ -512,19 +347,9 @@ backdrop-filter: blur(5px);
 #education .butt span {
   vertical-align: middle;
 }
-#education .butt:hover span {
-  position: relative;
-  left: 10px;
-}
-#education .line::before {
-  content: "";
-  position: absolute;
-  top: 58.5px;
-  right: -65px;
-  height: calc(100% - 60px);
-  width: 5px;
-  background: var(--footer-color);
-}
+
+
+
 
 /*! start of whyHireme section  */
 
@@ -546,13 +371,10 @@ backdrop-filter: blur(5px);
   color: #000000;
   cursor: pointer;
   display: inline-block;
-
   font-size: 16px;
   font-weight: 600;
-
   margin: 0;
   min-height: 60px;
-
   outline: none;
   padding: 16px 24px;
   text-align: center;
